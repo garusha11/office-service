@@ -1,0 +1,6 @@
+<!doctype html><html lang="ru" xmlns:th="http://www.thymeleaf.org"><body>
+<nav th:fragment="nav" class="nav"><a class="brand" href="/">OFFICE<span>OPS</span></a><div class="navlinks">
+<a th:if="${canAssets}" href="/assets">Оборудование</a><a th:if="${canTickets}" href="/tickets">Заявки</a>
+<a th:if="${canAccess}" href="/access">Доступ</a><a th:if="${canAudit}" href="/audit">Журнал</a></div>
+<div class="account"><span th:text="${actor}">admin</span><form th:action="@{/logout}" method="post"><button class="text-button">Выйти</button></form></div></nav>
+</body></html>

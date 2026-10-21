@@ -1,0 +1,6 @@
+<!doctype html><html lang="ru" xmlns:th="http://www.thymeleaf.org"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Office Ops</title><link rel="stylesheet" href="/css/style.css"></head><body><nav th:replace="~{fragments :: nav}"></nav>
+<main class="container"><div class="hero"><div class="eyebrow">ПАНЕЛЬ СЛУЖБЫ ЭКСПЛУАТАЦИИ</div><h1>Рабочее пространство</h1><p>Управляйте оборудованием, обрабатывайте заявки и контролируйте доступ сотрудников.</p></div>
+<div class="cards"><a class="card" th:if="${canAssets}" href="/assets"><span class="card-num">01</span><h2>Оборудование</h2><p>Реестр инвентарных объектов и их расположение.</p><span class="arrow">→</span></a>
+<a class="card" th:if="${canTickets}" href="/tickets"><span class="card-num">02</span><h2>Заявки</h2><p>Путь от новой неисправности до закрытой задачи.</p><span class="arrow">→</span></a>
+<a class="card" th:if="${canAccess}" href="/access"><span class="card-num">03</span><h2>Доступ</h2><p>Операторы, роли и разрешения для каждой функции.</p><span class="arrow">→</span></a>
+<a class="card" th:if="${canAudit}" href="/audit"><span class="card-num">04</span><h2>Журнал</h2><p>Последние изменения и действия операторов.</p><span class="arrow">→</span></a></div></main></body></html>
